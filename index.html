@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <title>TrentU Med-info!</title>
+        <style>
+            p, a {
+                font-family: "Roboto", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+                font-variation-settings: "wdth" 100;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                background-color: #f4f4f4;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background: #0073e6;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                font-size: 24px;
+            }
+            nav {
+                background: #ddd;
+                padding: 10px;
+                text-align: center;
+            }
+            nav a {
+                margin: 10px;
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+            }
+            section {
+                padding: 20px;
+            }
+            footer {
+                text-align: center;
+                padding: 10px;
+                background: #0073e6;
+                color: white;
+                margin-top: 20px;
+            }
+            .custom-img {
+                height: 120px; /* Adjust as needed */
+                object-fit: cover; /* Ensures the image fills the area properly */
+            }
+            .floating-background {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                z-index: -1; /* Keeps it behind content */
+            }
+            .bg-image {
+                position: absolute;
+                width: 50px; /* Adjust size */
+                opacity: 0.5; /* Makes images blend into the background */
+            }
+            /* Position images randomly */
+            .img1 { top: 10%; left: 20%; animation: float 4s ease-in-out infinite alternate; }
+            .img2 { top: 50%; left: 70%; animation: float 6s ease-in-out infinite alternate-reverse; }
+            .img3 { top: 80%; left: 40%; animation: float 5s ease-in-out infinite alternate; }
+            .img4 { top: 350%; left: 50%; animation: float 4s ease-in-out infinite alternate; }
+            .img5 { top: 400%; left: 30%; animation: float 6s ease-in-out infinite alternate-reverse; }
+            .img6 { top: 11%; left: 90%; animation: float 5s ease-in-out infinite alternate; }
+            .img7 { top: 77%; left: 50%; animation: float 4s ease-in-out infinite alternate; }
+            .img8 { top: 30%; left: 90%; animation: float 6s ease-in-out infinite alternate-reverse; }
+            .img9 { top: 90%; left: 10%; animation: float 5s ease-in-out infinite alternate; }
+            /* Floating animation */
+            @keyframes float {
+                0% { transform: translateY(0px) scale(1); }
+                100% { transform: translateY(30px) scale(2.05); }
+            }
+
+            /* Hover Effects for Section Images */
+            .hover-effect img {
+                transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+            }
+            .hover-effect img:hover {
+                transform: scale(1.1); /* Enlarge the image */
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow */
+                opacity: 0.9; /* Slightly reduce opacity */
+                border-radius: 10px; /* Add rounded corners */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="floating-background">
+                <img src="drug1.jpg" class="bg-image img1" alt="Floating Image 1">
+                <img src="drug2.jpg" class="bg-image img2" alt="Floating Image 2">
+                <img src="drug3.jpg" class="bg-image img3" alt="Floating Image 3">
+                <img src="drug4.jpg" class="bg-image img4" alt="Floating Image 4">
+                <img src="neuro1.jpg" class="bg-image img5" alt="Floating Image 5">
+                <img src="neuor2.jpg" class="bg-image img6" alt="Floating Image 6">
+                <img src="neuro3.avif" class="bg-image img7" alt="Floating Image 7">
+                <img src="patient1.png" class="bg-image img8" alt="Floating Image 8">
+                <img src="neuor4.jpg" class="bg-image img9" alt="Floating Image 9">
+            </div>
+            <header>Understanding Zopiclone - A Patient Guide</header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="#">Zopiclone Guide</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#what">What is Zopiclone?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#why">Why Am I Taking It?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#how">How Does It Work?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#risks">Potential Risks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tips">Safety Tips</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="drug.jpg" class="d-block w-100 custom-img" alt="..." />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="drug.jpg" class="d-block w-100 custom-img" alt="..." />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="sleeping.jpg" class="d-block w-100 custom-img" alt="..." />
+                    </div>
+                </div>
+            </div>
+
+            <div class="">
+                <section id="what" class="my-5">
+                    <div class="row align-items-center border bg-light p-5 shadow">
+                        <!-- Text Section -->
+                        <div class="col-md-6">
+                            <h2 class="fw-bold">What is Zopiclone?</h2>
+                            <p class="text-muted">
+                                Zopiclone is a sedative-hypnotic that promotes relaxation and sleep <strong>[1]</strong>. It works by increasing the activity of gamma-aminobutyric acid (GABA), a neurotransmitter that slows down brain activity to induce sleep.
+                            </p>
+                            <p class="text-muted">
+                                Zopiclone is classified as a non-benzodiazepine hypnotic and is commonly prescribed for short-term treatment of insomnia. It is metabolized in the liver and has a half-life of approximately 5 hours, making it suitable for nighttime use <strong>[4]</strong>.
+                            </p>
+                        </div>
+                        <!-- Image Section -->
+                        <div class="col-md-6 text-center hover-effect">
+                            <img src="gamma-aminobutyric.jpg" class="img-fluid rounded" alt="Zopiclone Medication" />
+                        </div>
+                    </div>
+                </section>
+
+                <section id="why" class="my-5">
+                    <div class="row align-items-center border bg-light p-5 shadow">
+                        <!-- Text Section -->
+                        <div class="col-md-6">
+                            <h2 class="fw-bold">Why Am I Taking It?</h2>
+                            <p class="text-muted">
+                                After surgery, difficulty sleeping is common due to pain and hospital routines. Zopiclone helps you fall asleep, which is essential for healing <strong>[2]</strong>.
+                            </p>
+                            <p class="text-muted">
+                                Insomnia can also be caused by stress, anxiety, or environmental factors. Zopiclone is prescribed to improve sleep quality and duration, especially in patients with transient or short-term insomnia <strong>[5]</strong>.
+                            </p>
+                        </div>
+                        <!-- Image Section -->
+                        <div class="col-md-6 text-center hover-effect">
+                            <img src="surgery.jpg" class="img-fluid rounded" alt="Zopiclone Medication" />
+                        </div>
+                    </div>
+                </section>
+
+                <section id="how" class="my-5">
+                    <div class="row align-items-center border bg-light p-5 shadow">
+                        <!-- Text Section -->
+                        <div class="col-md-6">
+                            <h2 class="fw-bold">How Does It Work?</h2>
+                            <p class="text-muted">
+                                Zopiclone enhances the effects of GABA, a neurotransmitter that inhibits brain activity. By binding to GABA receptors, it promotes sedation and reduces the time it takes to fall asleep <strong>[1]</strong>.
+                            </p>
+                            <p class="text-muted">
+                                Unlike benzodiazepines, Zopiclone has a more selective action on GABA receptors, which reduces the risk of side effects such as daytime drowsiness and cognitive impairment <strong>[6]</strong>.
+                            </p>
+                        </div>
+                        <!-- Image Section -->
+                        <div class="col-md-6 text-center hover-effect">
+                            <img src="receptor.jpg" class="img-fluid rounded" alt="Zopiclone Medication" />
+                        </div>
+                    </div>
+                </section>
+
+                <section id="risks" class="my-5">
+                    <div class="row align-items-center border bg-light p-5 shadow">
+                        <!-- Text Section -->
+                        <div class="col-md-6">
+                            <h2 class="fw-bold">Potential Risks</h2>
+                            <ul>
+                                <li>It is important to avoid alcohol when using Zopiclone to prevent dangerous interactions <strong>[3]</strong>.</li>
+                                <li>Do not exceed the prescribed dose, as it can lead to dependence <strong>[1]</strong>.</li>
+                                <li>Avoid driving or operating machinery after taking Zopiclone due to drowsiness <strong>[2]</strong>.</li>
+                                <li>Long-term use of Zopiclone may lead to tolerance, requiring higher doses for the same effect <simages/trong>[7]</strong>.</li>
+                                <li>Withdrawal symptoms, such as rebound insomnia and anxiety, may occur if Zopiclone is stopped abruptly <strong>[8]</strong>.</li>
+                            </ul>
+                        </div>
+                        <!-- Image Section -->
+                        <div class="col-md-6 text-center hover-effect">
+                            <img src="dizzy.jpg" class="img-fluid rounded" alt="Zopiclone Medication" />
+                        </div>
+                    </div>
+                </section>
+
+                <section id="tips" class="my-5">
+                    <div class="row align-items-center border bg-light p-5 shadow">
+                        <!-- Text Section -->
+                        <div class="col-md-6">
+                            <h2 class="fw-bold">Top 3 Safety Tips</h2>
+                            <ol>
+                                <li>Take only when truly needed to prevent dependence.</li>
+                                <li>Do not drive after taking Zopiclone due to drowsiness.</li>
+                                <li>Avoid alcohol & sedatives to reduce dangerous side effects.</li>
+                            </ol>
+                            <p class="text-muted">
+                                Additionally, consult your doctor before stopping Zopiclone to avoid withdrawal symptoms. Always follow the prescribed dosage and duration to minimize risks <strong>[9]</strong>.
+                            </p>
+                        </div>
+                        <!-- Image Section -->
+                        <div class="col-md-6 text-center hover-effect">
+                            <img  src="quest drug.jpg" class="img-fluid rounded im" alt="Zopiclone Medication" />
+                        </div>
+                    </div>
+                </section>
+
+                <section id="references" class="my-5">
+                    <div class="row align-items-center border bg-light p-5 shadow">
+                        <!-- Text Section -->
+                        <div class="col-12">
+                            <h2 class="fw-bold">References</h2>
+                            <ul class="list-unstyled text-muted">
+                                <li>
+                                    <strong>1.</strong> National Institute for Health and Care Excellence. (2022). <i>Zopiclone for insomnia</i>. NICE.
+                                    <a href="https://www.nice.org.uk" target="_blank" class="text-primary">https://www.nice.org.uk</a>
+                                </li>
+                                <li>
+                                    <strong>2.</strong> Drugs.com. (2023). <i>Zopiclone: Uses, Dosage, and Side Effects</i>.
+                                    <a href="https://www.drugs.com/zopiclone.html" target="_blank" class="text-primary">https://www.drugs.com/zopiclone.html</a>
+                                </li>
+                                <li>
+                                    <strong>3.</strong> RxList. (2023). <i>Zopiclone: Drug Information and Patient Guide</i>.
+                                    <a href="https://www.rxlist.com/zopiclone.html" target="_blank" class="text-primary">https://www.rxlist.com/zopiclone.html</a>
+                                </li>
+                                <li>
+                                    <strong>4.</strong> British National Formulary. (2023). <i>Zopiclone: Pharmacokinetics</i>.
+                                    <a href="https://www.bnf.org" target="_blank" class="text-primary">https://www.bnf.org</a>
+                                </li>
+                                <li>
+                                    <strong>5.</strong> Mayo Clinic. (2023). <i>Insomnia: Causes and Treatment</i>.
+                                    <a href="https://www.mayoclinic.org" target="_blank" class="text-primary">https://www.mayoclinic.org</a>
+                                </li>
+                                <li>
+                                    <strong>6.</strong> PubMed. (2023). <i>Zopiclone vs Benzodiazepines: A Comparative Study</i>.
+                                    <a href="https://www.ncbi.nlm.nih.gov" target="_blank" class="text-primary">https://www.ncbi.nlm.nih.gov</a>
+                                </li>
+                                <li>
+                                    <strong>7.</strong> World Health Organization. (2023). <i>Zopiclone: Dependence and Tolerance</i>.
+                                    <a href="https://www.who.int" target="_blank" class="text-primary">https://www.who.int</a>
+                                </li>
+                                <li>
+                                    <strong>8.</strong> NHS. (2023). <i>Zopiclone: Withdrawal Symptoms</i>.
+                                    <a href="https://www.nhs.uk" target="_blank" class="text-primary">https://www.nhs.uk</a>
+                                </li>
+                                <li>
+                                    <strong>9.</strong> FDA. (2023). <i>Zopiclone: Safety Guidelines</i>.
+                                    <a href="https://www.fda.gov" target="_blank" class="text-primary">https://www.fda.gov</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer>&copy; 2025 Patient Education - Safe Medication Use</footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener("scroll", function () {
+                let scrollPosition = window.scrollY;
+                document.querySelectorAll(".bg-image").forEach((image, index) => {
+                    let speed = (index + 1) * 0.1; // Adjusts movement speed for each image
+                    image.style.transform = `translateY(${scrollPosition * speed}px)`;
+                });
+            });
+        </script>
+    </body>
+</html>
